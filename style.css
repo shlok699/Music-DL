@@ -1,0 +1,81 @@
+
+/* Modern gradient text */
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Custom animations */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Smooth transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+button:focus, input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.3);
+}
+
+.dark button:focus, .dark input:focus {
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
+}
+
+/* Glow effect */
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(236, 72, 153, 0.7);
+    }
+}
